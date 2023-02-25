@@ -35,9 +35,11 @@ function App() {
       <img src={myImage3} id="portrit" alt="Error"/>
       <h1 id="title">Tom Stephen</h1>
       <p id="description">I am a cross country skiier on the Canadien national team. I train and live in Canmore Alberta.</p>
-      <button id="instagram-profile-link" onClick={openInstagram}>My Instagram</button>
-      <button id="fis-profile-link" onClick={openFIS}>My FIS Profile</button>
-      <button id="facebook-prifile-link" onClick={openFacebook}>Facebook</button>
+      <div id="links">
+        <button id="instagram-profile-link" onClick={openInstagram}>My Instagram</button>
+        <button id="fis-profile-link" onClick={openFIS}>My FIS Profile</button>
+        <button id="facebook-prifile-link" onClick={openFacebook}>Facebook</button>
+      </div>
     </div>
     </>
   );

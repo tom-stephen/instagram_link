@@ -4,7 +4,6 @@ body{
   color: #333;
   margin: 0;
   padding: 0;
-  background-color: lightblue;
 }
 
 body.dark-mode{
@@ -38,5 +37,33 @@ img{
   align-items: center;
   justify-content: center;
   height: 100%
+}
+
+button{
+  border: none;
+  background-color: #CCD7E4;
+  border-radius: 4px;
+  outline: none;
+  color: inherit;
+  width: 150px;
+  height: 30px;
+  padding: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+button:hover{
+  background-color: #B3C2D0;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
 }
 
