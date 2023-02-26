@@ -40,7 +40,8 @@ function App() {
     window.open("https://nordiqcanada.ca/athlete/tom-stephen/");
   }
   // make sure the page is loaded first
-    window.onload = function() {
+  window.onload = function() {
+    // dark mode button
     const darkmodeBtn = document.getElementById("dark-mode");
     darkmodeBtn.addEventListener("click", function() {
       document.body.classList.toggle("dark-mode");
