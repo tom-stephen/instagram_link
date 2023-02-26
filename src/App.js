@@ -1,28 +1,62 @@
 
 import './App.css';
-import myImage from './img1.png';
+// import myImage from './img1.png';
 import myImage3 from './img3.png';
 
 function App() {
 
-  // make sure the page is loaded first
+  // my instagram profile
   function openInstagram() {
     window.open("https://instagram.com/xctom?igshid=YmMyMTA2M2Y=");
   }
 
+  // my fis profile
   function openFIS() {
     window.open("https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=CC&competitorid=226849");
   }
 
+  // my facebook
   function openFacebook() {
     window.open("https://www.facebook.com/tom.stephen.545402?mibextid=LQQJ4d");
   }
 
-  window.onload = function() {
-  const darkmodeBtn = document.getElementById("dark-mode");
-  darkmodeBtn.addEventListener("click", function() {
-    document.body.classList.toggle("dark-mode");
-  });
+  // fischer website
+  function openFischer() {
+    window.open("https://www.fischersports.com/us_en/");
+  }
+
+  // swix website
+  function openSwix() {
+    window.open("https://www.swixsport.ca/");
+  }
+
+  // dissent website
+  function openDissent() {
+    window.open("https://www.dissentlabs.com/");
+  }
+
+  // nordiq canada profile
+  function openNCProfile() {
+    window.open("https://nordiqcanada.ca/athlete/tom-stephen/");
+  }
+  // make sure the page is loaded first
+    window.onload = function() {
+    const darkmodeBtn = document.getElementById("dark-mode");
+    darkmodeBtn.addEventListener("click", function() {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    // dropdown menu for sponsors
+    const button = document.getElementById("sponsors");
+    const dropdown = document.querySelector(".dropdown");
+
+    button.addEventListener("click", function() {
+      if (dropdown.style.display === "none") {
+        dropdown.style.display = "block";
+      } else {
+        dropdown.style.display = "none";
+      }
+    });
   }
 
   return (
@@ -34,11 +68,20 @@ function App() {
     <div id="content">
       <img src={myImage3} id="portrit" alt="Error"/>
       <h1 id="title">Tom Stephen</h1>
-      <p id="description">I am a cross country skiier on the Canadien national team. I train and live in Canmore Alberta.</p>
+      <div id="desc-box">
+        <p id="description">Cross country skiier on the Canadien national team. I train and live in Canmore Alberta and go to school in at the University of Calgary.</p>
+      </div>
       <div id="links">
-        <button id="instagram-profile-link" onClick={openInstagram}>My Instagram</button>
-        <button id="fis-profile-link" onClick={openFIS}>My FIS Profile</button>
+        <button id="instagram-profile-link" onClick={openInstagram}>Instagram</button>
+        <button id="fis-profile-link" onClick={openFIS}>FIS Profile</button>
         <button id="facebook-prifile-link" onClick={openFacebook}>Facebook</button>
+        <button id="nc-profile" onClick={openNCProfile}>Nordiq Canada Profile</button>
+        <button id="sponsors">Sponsors</button>
+          <div class="dropdown">
+            <button id="fischer" class="sp-but" onClick={openFischer}>Fischer</button>
+            <button id="swix" class="sp-but"  onClick={openSwix}>Swix</button>
+            <button id="dissent" class="sp-but"  onClick={openDissent}>Dissent</button>
+          </div>
       </div>
     </div>
     </>

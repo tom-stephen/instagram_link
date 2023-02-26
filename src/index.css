@@ -1,20 +1,22 @@
 body{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #333;
+  color: #fff;
+  background-color: #333;
   margin: 0;
   padding: 0;
 }
 
 body.dark-mode{
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
 }
 
 #dark-mode {
   border: none;
   background-color: transparent;
   outline: none;
+  color: inherit;
 }
 
 img{
@@ -26,7 +28,7 @@ img{
 #top {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   height: 10%;
 }
@@ -41,11 +43,12 @@ img{
 
 button{
   border: none;
-  background-color: #CCD7E4;
+  background-color: #024b35;
   border-radius: 4px;
   outline: none;
-  color: inherit;
-  width: 150px;
+  /* color: inherit; */
+  color: #fff;
+  width: 200px;
   height: 30px;
   padding: 4%;
   display: flex;
@@ -55,7 +58,7 @@ button{
 }
 
 button:hover{
-  background-color: #B3C2D0;
+  background-color: #3d4744;
 }
 
 #links {
@@ -67,3 +70,49 @@ button:hover{
   width: 100%;
 }
 
+#desc-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+p {
+  text-align: center;
+}
+#description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+/*  Sponsors dropdown menue */
+.sp-but{
+  background-color: beige;
+  color: #333;
+  padding-left: 10%;
+}
+
+.sp-but:hover{
+  background-color: rgb(241, 241, 236);
+  color: #333;
+}
+
+.dropdown {
+  display: none;
+  z-index: 1;
+}
+
+.dropdown a {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
