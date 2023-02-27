@@ -70,7 +70,7 @@ function App() {
       <img src={myImage3} id="portrit" alt="Error"/>
       <h1 id="title">Tom Stephen</h1>
       <div id="desc-box">
-        <p id="description">Cross country skiier on the Canadien national team. I train and live in Canmore Alberta and go to school in at the University of Calgary.</p>
+        <p id="description">Cross country skiier on the Canadian national team. I train and live in Canmore Alberta and go to school in at the University of Calgary.</p>
       </div>
       <div id="links">
         <button id="instagram-profile-link" onClick={openInstagram}>Instagram</button>
