@@ -39,31 +39,24 @@ function App() {
   function openNCProfile() {
     window.open("https://nordiqcanada.ca/athlete/tom-stephen/");
   }
-  // make sure the page is loaded first
-  window.onload = function() {
-    // dark mode button
-    const darkmodeBtn = document.getElementById("dark-mode");
-    darkmodeBtn.addEventListener("click", function() {
-      document.body.classList.toggle("dark-mode");
-    });
 
-    // dropdown menu for sponsors
-    const button = document.getElementById("sponsors");
+  const darkModeBtm = () => {
+    document.body.classList.toggle("dark-mode");
+  }
+
+  const dropDown = () => {
     const dropdown = document.querySelector(".dropdown");
-
-    button.addEventListener("click", function() {
-      if (dropdown.style.display === "none") {
-        dropdown.style.display = "block";
-      } else {
-        dropdown.style.display = "none";
-      }
-    });
+    if (dropdown.style.display === "none") {
+      dropdown.style.display = "block";
+    } else {
+       dropdown.style.display = "none";
+    }
   }
 
   return (
     <>
     <div id="top">
-      <button id="dark-mode">&#9681;</button>
+      <button id="dark-mode" onClick={darkModeBtm}>&#9681;</button>
     </div>
 
     <div id="content">
@@ -77,11 +70,11 @@ function App() {
         <button id="fis-profile-link" onClick={openFIS}>FIS Profile</button>
         <button id="facebook-prifile-link" onClick={openFacebook}>Facebook</button>
         <button id="nc-profile" onClick={openNCProfile}>Nordiq Canada Profile</button>
-        <button id="sponsors">Sponsors</button>
-          <div class="dropdown">
-            <button id="fischer" class="sp-but" onClick={openFischer}>Fischer</button>
-            <button id="swix" class="sp-but"  onClick={openSwix}>Swix</button>
-            <button id="dissent" class="sp-but"  onClick={openDissent}>Dissent</button>
+        <button id="sponsors" onClick={dropDown}>Sponsors</button>
+          <div className="dropdown">
+            <button id="fischer" className="sp-but" onClick={openFischer}>Fischer</button>
+            <button id="swix" className="sp-but"  onClick={openSwix}>Swix</button>
+            <button id="dissent" className="sp-but"  onClick={openDissent}>Dissent</button>
           </div>
       </div>
     </div>
